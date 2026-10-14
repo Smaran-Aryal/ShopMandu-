@@ -4,7 +4,8 @@
 ** Mobile Application Development – Flutter
 
 ## Description
-ShopMandu is a mini e-commerce mobile application built with Flutter. It shows products by category and lets the user move from the home page to a category page and to a product-details page. It uses static/local data only (no backend, login, payment or database).
+ShopMandu is a multi-screen mini e-commerce mobile application built with Flutter for the Mobile Application Development course. Users can browse promotional banners, explore products by category, view product details, and add items to the cart with SnackBar feedback. The app uses static local product data and demonstrates reusable widgets, horizontal 
+and grid scrolling, Stack-based product cards, and navigation with data passing between screens.
 
 ## Features
 - Home page with AppBar (logo, search and cart icons)
