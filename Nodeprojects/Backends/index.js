@@ -11,12 +11,44 @@ app.get("/", (req, res) => {
     res.send("Miguel Miguel");
 });
 
-app.post("/", (req, res) => {
-    res.json({
-        message: "POST request successful",
-        receivedData: req.body
-    });
+app.get("/user", (req, res) => {
+    res.send("Hello Sathi");
+})
+
+app.post("/add", (req, res) => {
+
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+
+        console.log("username or password not available");
+
+
+    }
+
+    if (password.length > 8){
+        res.status(400).json({
+            success: false,
+            message: "PASSWORD REQUIRED MORE THEN 8 CHARACTERS"
+        })
+    }
+    console.log(username);
+    console.log(password);
+
+    return res.send("User Created");
+    res.status(200).json(
+        {
+            success: true,
+            data:{username,password},
+            message:"user response saved"
+        }
+
+    )
+
+
+
 });
+
 
 app.put("/", (req, res) => {
     res.json({
